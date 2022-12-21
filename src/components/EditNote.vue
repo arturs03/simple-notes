@@ -7,7 +7,7 @@ export default defineComponent({
     computed: {
         ...mapState(useActiveNoteStore, ['note']),
         createdAt(): String {
-            const date = this.note?.createdAt
+            const date = this.note?.createdAt?.toString()
 
             if (date) {
                 return new Date(date).toLocaleDateString()
