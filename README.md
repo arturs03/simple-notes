@@ -2,6 +2,8 @@
 
 Basic notes taking application, which stores notes in localstorage and user can do CRUD actions with them.
 
+Page is available on vercel - https://simple-notes-qd4u97wad-arturs03.vercel.app/
+
 ## Project Setup
 
 ```sh
