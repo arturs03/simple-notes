@@ -1,6 +1,6 @@
 export default class NoteItem {
     id: string = Date.now().toString(32);
-    title: string = '';
+    title: string = 'Title';
     description: string = '';
-    createdAt: string = Date.now().toString();
+    createdAt: number = Date.now();
 }
