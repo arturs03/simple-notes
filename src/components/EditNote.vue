@@ -20,11 +20,20 @@ export default defineComponent({
 </script>
 
 <template>
-    <div v-if="note.createdAt">
-        <label for="title">Title:</label>
-        <input name="title" v-model="note.title" />
-        <label for="description">Description:</label>
-        <input name="description" v-model="note.description" />
-        <span>{{ createdAt }}</span>
+    <div v-if="note.createdAt" class="flex flex-col p-5">
+        <input
+            class="py-2 px-4 mb-4 bg-transparent text-2xl w-100"
+            name="title"
+            placeholder="Title"
+            v-model="note.title"
+        />
+
+        <textarea
+            class="border border-slate-400 dark:border-slate-100/10 rounded-lg py-2 px-4 mb-4 bg-transparent"
+            name="description"
+            placeholder="Notes"
+            v-model="note.description"
+        ></textarea>
+        <span class="text-xs text-slate-300">{{ createdAt }}</span>
     </div>
 </template>
