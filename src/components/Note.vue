@@ -9,6 +9,7 @@ export default defineComponent({
             required: true,
         },
     },
+    methods: {},
 })
 </script>
 <style scoped>
@@ -35,6 +36,10 @@ export default defineComponent({
         v-if="note.createdAt"
         class="bounce-enter-active flex justify-center border border-slate-400 dark:border-slate-100/10 rounded-lg py-2 px-4 bg-white bg-opacity-10 backdrop-blur-lg drop-shadow-lg w-40 text-center"
     >
-        <p class="txt-lg text-slate-300">{{ note.title }}</p>
+        <p
+            class="txt-lg text-slate-300 text-ellipsis overflow-hidden whitespace-nowrap"
+        >
+            {{ note.title }}
+        </p>
     </div>
 </template>

@@ -32,7 +32,7 @@ export default defineComponent({
 })
 </script>
 <template>
-    <div class="mx-auto p-5 h-screen bg-slate-800/10">
+    <div class="p-5 h-screen bg-slate-800/10">
         <div class="flex flex-col gap-y-2">
             <AddNote @addNote="onNoteAdded" />
             <Note

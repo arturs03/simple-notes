@@ -4,7 +4,7 @@ import EditNote from '@/components/EditNote.vue'
 </script>
 
 <template>
-    <main class="flex flex-row">
+    <main class="flex flex-row w-full">
         <Notes />
         <EditNote />
     </main>
