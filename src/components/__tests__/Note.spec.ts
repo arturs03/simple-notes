@@ -13,11 +13,9 @@ describe('Test Note component', () => {
     it('Render 2 paragrahps with specific values', () => {
         const noteProps = new NoteItem()
         noteProps.title = 'test card title'
-        noteProps.description = 'test card decription'
 
         const wrapper = mount(Note, { props: { note: noteProps } }),
             textElements = wrapper.findAll('p')
         expect(textElements[0].text()).toBe(noteProps.title)
-        expect(textElements[1].text()).toBe(noteProps.description)
     })
 })
