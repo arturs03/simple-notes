@@ -11,7 +11,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <header class="h-screen bg-slate-800/50">
+    <header class="min-h-screen h-full bg-slate-800/50">
         <nav class="flex flex-col p-4 gap-y-3">
             <RouterLink
                 to="/"

@@ -12,11 +12,13 @@ import NoteContentItem, {
 } from '@/models/noteContent.model'
 import EditableField from './EditableField.vue'
 import { mapState } from 'pinia'
+import EditableImage from './EditableImage.vue'
 
 export default defineComponent({
     components: {
         FontAwesomeIcon,
         EditableField,
+        EditableImage,
     },
     data: () => ({
         CONTENT_FULL_TYPES,
@@ -74,9 +76,9 @@ export default defineComponent({
                     v-else-if="content.type === CONTENT_TYPE_CHECK_LIST"
                     class="bg-transparent focus-visible:outline-none break-all w-full text-slate-200"
                 />
-                <input
+                <EditableImage
                     v-else-if="content.type === CONTENT_TYPE_IMG"
-                    class="bg-transparent focus-visible:outline-none break-all w-full text-slate-200"
+                    v-model:image-url="content.data"
                 />
             </div>
         </div>

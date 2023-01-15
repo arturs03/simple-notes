@@ -24,6 +24,7 @@ export default defineComponent({
     methods: {
         onNoteAdded(note: NoteItem) {
             this.notes.push(note)
+            this.setActiveNote(note)
         },
         setActiveNote(note: NoteItem) {
             this.activeNoteStore.setActiveNote(note)
